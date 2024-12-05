@@ -3,26 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cryptocurrency Project</title>
+  <title>Cryptocurrency Mystery</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <div class="overlay">
     <div class="intro-text">
-      <h1>Welcome to the Future of Finance</h1>
-      <p>Something new is coming...</p>
-      <button id="revealButton">Can you uncover the secret?</button>
+      <h1>Something mysterious is in the air...</h1>
+      <p>Can you uncover the secret? Proceed carefully.</p>
+      <button id="startButton">Begin the journey</button>
     </div>
   </div>
 
-  <div id="secretMessage" class="hidden-message">
-    <p>The journey is just beginning. You are one of the few who know...</p>
-    <p>Stay tuned for more clues.</p>
+  <div id="puzzleContainer" class="puzzle-container hidden">
+    <p>What is the sum of the numbers in the image below? The code is hidden in plain sight...</p>
+    <img src="puzzle.jpg" alt="Puzzle" class="puzzle-image">
+    <input type="text" id="answer" placeholder="Enter your answer" />
+    <button id="submitAnswer">Submit</button>
+  </div>
+
+  <div id="nextStep" class="hidden">
+    <p>Congratulations! You've found the first clue.</p>
+    <p>Stay tuned for more... </p>
   </div>
 
   <div class="footer">
-    <p>&copy; 2024 CryptoProject | All Rights Reserved</p>
+    <p>&copy; 2024 Cryptocurrency Project | All Rights Reserved</p>
   </div>
 
   <script src="script.js"></script>
