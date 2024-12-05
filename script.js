@@ -1,13 +1,13 @@
 document.getElementById('startButton').addEventListener('click', function() {
-  // Reveal the hidden message
-  document.getElementById('message').classList.remove('hidden');
+  // Reveal the hidden message after the button is clicked
+  document.getElementById('message').classList.add('visible');
   document.getElementById('startButton').classList.add('hidden');
-  
-  // Reveal the countdown
+
+  // Reveal the countdown section
   setTimeout(function() {
-    document.getElementById('clock').classList.remove('hidden');
+    document.getElementById('countdown-section').classList.remove('hidden');
     startCountdown();
-  }, 1500); // Wait 1.5 seconds before showing the clock
+  }, 1500); // Wait 1.5 seconds before showing the countdown
 });
 
 function startCountdown() {
