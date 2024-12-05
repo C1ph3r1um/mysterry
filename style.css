@@ -6,68 +6,69 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #111;
+  background: linear-gradient(135deg, #111, #222);
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
-  position: relative;
+  text-align: center;
 }
 
 .container {
-  text-align: center;
-  position: relative;
+  max-width: 800px;
+  width: 100%;
 }
 
-h1 {
+header {
   font-size: 3em;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #ff3333; /* Red color for the title */
-}
-
-p {
-  font-size: 1.5em;
-  color: #ddd;
+  font-weight: bold;
   margin-bottom: 30px;
 }
 
+p {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
 button {
+  padding: 15px 40px;
   background-color: #ff3333;
   color: white;
   font-size: 1.2em;
-  padding: 15px 40px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 }
 
 button:hover {
   background-color: #ff4444;
 }
 
-.hidden {
-  display: none;
+.hidden-message {
+  font-size: 1.4em;
+  color: #ddd;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
-#message {
-  margin-top: 40px;
-  font-size: 1.2em;
-  color: #aaa;
-}
-
-.clock {
-  margin-top: 50px;
-  font-size: 2em;
-  color: #00ff00;
+.hidden-message.visible {
+  opacity: 1;
 }
 
 #countdown {
   font-size: 2.5em;
-  margin-top: 10px;
+  color: #00ff00;
   font-weight: bold;
+  margin-top: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  font-size: 1em;
+  color: #bbb;
 }
