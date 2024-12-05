@@ -1,0 +1,66 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 100px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #e5e5e5;
+}
+
+button {
+    background-color: #444;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+.glitch {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e5e5e5;
+}
+
+.glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: red;
+    z-index: -1;
+    animation: glitch-animation 1s infinite;
+}
+
+@keyframes glitch-animation {
+    0% {
+        transform: translate(2px, 2px) skew(-5deg);
+    }
+    25% {
+        transform: translate(-2px, -2px) skew(5deg);
+    }
+    50% {
+        transform: translate(2px, 2px) skew(-5deg);
+    }
+    75% {
+        transform: translate(-2px, -2px) skew(5deg);
+    }
+    100% {
+        transform: translate(2px, 2px) skew(-5deg);
+    }
+}
